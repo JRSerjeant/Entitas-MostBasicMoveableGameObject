@@ -17,7 +17,6 @@ public class InstantiateGameObjectSystem : IReactiveSystem, ISetPool
 
     public void Execute(List<Entity> entities)
     {
-        Debug.Log("InstantiateGameObjectSystem - public void Execute(List<Entity> entities)");
         foreach (var e in entities)
         {
             GameObject go = UnityEngine.GameObject.Instantiate<GameObject>(Resources.Load(e.prefabName.Name) as GameObject);
